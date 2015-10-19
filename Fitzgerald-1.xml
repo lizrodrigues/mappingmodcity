@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="mappingmodcity/2015-10-15-modmap1.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
+   <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>May Day</title>
@@ -15,31 +15,463 @@
             <p>"May Day" by F. Scott Fitzgerald</p>
          </sourceDesc>
       </fileDesc>
-  </teiHeader>
-  <text>
+   </teiHeader>
+   <text>
       <body>
-         <div1>
+         <listEvent>
+            <event xml:id="WorldWarI" from="1914-07-28" to="1918-11-11">
+               <label>World War I</label>
+               <desc>The first world war began with a thing that happened and ended with an
+                  armistice in 1918. It was known for its grim trench warfare and high fatality
+                  rate.</desc>
+            </event>
+         </listEvent>
+         <listPlace>
+            <place xml:id="NewYorkCity">
+               <label><settlement>New York City</settlement></label>
+            </place>
+            <place xml:id="BiltmoreHotel">
+               <label>Biltmore Hotel</label>
+               <location type="building">
+                  <address>
+                     <addrLine>335 Madison Ave.</addrLine>
+                  </address>
+               </location>
+            </place>
+            <place xml:id="Delmonicos">
+               <label>Delmonico's</label>
+               <desc>A fashionable club.</desc>
+               <location type="building">
+                  <address>
+                     <addrLine>2 South William St.</addrLine>
+                  </address>
+               </location>
+            </place>
+            <place xml:id="France">
+               <label><country key="FR">France</country></label>
+            </place>
+            <place xml:id="Harrisburg">
+               <label><settlement>Harrisburg</settlement></label>
+            </place>
+            <place xml:id="YaleClub">
+               <label>Yale Club</label>
+               <location type="building">
+                  <address>
+                     <addrLine>Some address</addrLine>
+                  </address>
+               </location>
+            </place>
+         </listPlace>
+         <listPerson>
+            <person xml:id="PhilipDean" role="character">
+               <persName>Philip Dean</persName>
+               <persName><addName>Dean</addName></persName>
+            </person>
+            <person xml:id="GordonSterrett" role="character">
+               <persName>Gordon Sterrett</persName>
+               <persName><addName>Gordy</addName></persName>
+            </person>
+            <person xml:id="EdithBradin" role="character">
+               <persName>Edith Bradin</persName>
+            </person>
+            <person xml:id="JewelHudson" role="character">
+               <persName>Jewel Hudson</persName>
+            </person>
+         </listPerson>
+
+         <div type="prologue">
             <head>Prologue</head>
-         <p>There had been <event when="1914-1918" desc="The first world war.">a war</event> fought and won and the <place><settlement><placeName>New York City</placeName>great city</settlement></place> of the
-            conquering people was crossed with triumphal arches and vivid with
-            thrown flowers of white, red, and rose. All through the long spring
-            days <ref type="image">the returning soldiers</ref> marched up the chief highway behind the
-            strump of drums and the joyous, resonant wind of the brasses, while
-            merchants and clerks left their bickerings and figurings and, crowding
-            to the windows, turned their white-bunched faces gravely upon the
-            passing battalions.</p>
-         </div1>
-         <div2>
+
+            <p>There had been <rs type="event" ref="#WorldWarI">a war</rs> fought and won and the
+                  <rs type="place" ref="#NewYorkCity">great city</rs> of the conquering people was
+               crossed with triumphal arches and vivid with thrown flowers of white, red, and rose.
+               All through the long spring days <ref type="image">the returning soldiers</ref>
+               <rs type="direction">marched up the chief highway</rs> behind the strump of drums and
+               the joyous, resonant wind of the brasses, while merchants and clerks left their
+               bickerings and figurings and, crowding to the windows, turned their white-bunched
+               faces gravely upon the passing battalions.</p>
+
+            <p>Never had there been such splendor in the great city, for the victorious war had
+               brought plenty in its train, and the merchants had flocked thither from the South and
+               West with their households to taste of all the luscious feasts and witness the lavish
+               entertainments prepared--and to buy for their women furs against the next winter and
+               bags of golden mesh and varicolored slippers of silk and silver and rose satin and
+               cloth of gold.</p>
+
+            <p>So <rs type="sound">gaily and noisily</rs> were the peace and prosperity impending
+               hymned by the scribes and poets of the conquering people that more and more spenders
+               had gathered from the provinces to drink the wine of excitement, and faster and
+               faster did the merchants dispose of their trinkets and slippers until they sent up a
+               mighty cry for more trinkets and more slippers in order that they might give in
+               barter what was demanded of them. Some even of them flung up their hands helplessly,
+               shouting:</p>
+
+            <p><quote>"Alas! I have no more slippers! and alas! I have no more trinkets! May heaven
+                  help me for I know not what I shall do!"</quote></p>
+
+            <p>But no one listened to their great outcry, for the throngs were far too busy--day by
+               day, the foot-soldiers trod jauntily the highway and all exulted because the young
+               men returning were pure and brave, sound of tooth and pink of cheek, and the young
+               women of the land were virgins and comely both of face and of figure.</p>
+
+            <p>So during all this time there were many adventures that happened in the <rs
+                  type="direction" ref="#NewYorkCity">great city</rs>, and, of these, several--or
+               perhaps one--are here set down.</p>
+
+         </div>
+         <div type="chapter">
             <head>I</head>
-         <p>At nine o'clock on the morning of the first of May, 1919, a young man
-            spoke to the room clerk at the <location type="hotel">Biltmore Hotel</location>,asking if Mr. Philip
-            Dean were registered there, and if so, could he be connected with Mr.
-            Dean's rooms. The inquirer was dressed in a well-cut, shabby suit. He
-            was small, slender, and darkly handsome; his eyes were framed above
-            with unusually long eyelashes and below with the blue semicircle of
-            ill health, this latter effect heightened by an unnatural glow which
-            colored his face like a low, incessant fever.</p>
-         </div2>
+            <p>At nine o'clock on the morning of the <date when="1919-05-01">first of May,
+                  1919</date>, a young man spoke to the room clerk at the <placeName
+                  ref="#BiltmoreHotel">
+                  <rs ref="url" type="image">Biltmore Hotel</rs></placeName>, asking if <persName
+                  ref="#PhilipDean">Mr. Philip Dean</persName> were registered there, and if so,
+               could he be connected with Mr. Dean's rooms. The inquirer was dressed in <rs
+                  type="image" ref="url">a well-cut, shabby suit</rs>. He was small, slender, and
+               darkly handsome; his eyes were framed above with unusually long eyelashes and below
+               with the blue semicircle of ill health, this latter effect heightened by an unnatural
+               glow which colored his face like a low, incessant fever.</p>
+
+            <p><persName ref="#PhilipDean">Mr. Dean</persName> was staying there. The young man was
+               directed to a <rs ref="url" type="image">telephone</rs> at the side.</p>
+
+            <p>After a second his connection was made; a sleepy voice hello'd from somewhere
+               above.</p>
+
+            <p><said>"<persName ref="#PhilipDean">Mr. Dean</persName>?"</said>--this very
+                  eagerly--<said>"it's <persName ref="#GordonSterrett">Gordon</persName>, <persName
+                     ref="#PhilipDean">Phil</persName>. It's <persName ref="#GordonSterrett">Gordon
+                     Sterrett</persName>. I'm down-stairs. I heard you were in <placeName
+                     ref="#NewYorkCity">New York</placeName> and I had a hunch you'd be
+                  here."</said></p>
+
+            <p><said aloud="false">The sleepy voice became gradually enthusiastic. Well, how was
+                  Gordy, old boy! Well, he certainly was surprised and tickled! Would<persName
+                     ref="#GordonSterrett">Gordy</persName>come right up, for Pete's
+               sake!</said></p>
+
+            <p>A few minutes later <persName ref="#PhilipDean">Philip Dean</persName>, dressed in
+               blue silk pajamas, opened his door and the two young men greeted each other with a
+               half-embarrassed exuberance. They were both about twenty-four, <rs type="image"
+                  ref="url" ana="Yale Class of 1913">Yale graduates of the year before the war</rs>;
+               but there the resemblance stopped abruptly.<persName ref="#PhilipDean">
+                  Dean</persName>was blond, ruddy, and rugged under his thin pajamas. Everything
+               about him radiated fitness and bodily comfort. He smiled frequently, showing large
+               and prominent teeth. </p>
+
+            <p><said>"I was going to look you up,"</said> he cried enthusiastically. <said>"I'm
+                  taking a couple of weeks off. If you'll sit down a sec I'll be right with you.
+                  Going to take a shower."</said></p>
+
+            <p>As he vanished into the bathroom his visitor's dark eyes roved nervously around the
+               room, resting for a moment on a great <rs type="image" ref="url">English travelling
+                  bag</rs> in the corner and on a family of <rs type="image" ref="url">thick silk
+                  shirts littered on the chairs amid impressive neckties and soft woollen
+               socks</rs>.</p>
+
+            <p><persName ref="#GordonSterrett">Gordon</persName> rose and, picking up one of the
+               shirts, gave it a minute examination. It was of very heavy silk, yellow, with a pale
+               blue stripe--and there were nearly a dozen of them. He stared involuntarily at his
+               own shirt-cuffs--they were ragged and linty at the edges and soiled to a faint gray.
+               Dropping the silk shirt, he held his coat-sleeves down and worked the frayed
+               shirt-cuffs up till they were out of sight. Then he went to the mirror and looked at
+               himself with listless, unhappy interest. His tie, of former glory, was faded and
+               thumb-creased--it served no longer to hide the jagged buttonholes of his collar. He
+               thought, quite without amusement, that only three years before he had received a
+               scattering vote in the senior elections at college for being the best-dressed man in
+               his class.</p>
+
+            <p>Dean emerged from the bathroom polishing his body.</p>
+
+            <p><said>"Saw an old friend of yours last night,"</said> he remarked. <said>"Passed her
+                  in the lobby and couldn't think of her name to save my neck. That girl you brought
+                  up to <note type="gloss" ana="Location of Yale University">New Haven</note> senior
+                  year."</said></p>
+
+            <p>Gordon started.</p>
+
+            <p><said>"<persName ref="#EdithBradin">Edith Bradin</persName>? That whom you
+                  mean?"</said></p>
+
+            <p><said>"'At's the one. Damn good looking. She's still sort of a pretty doll--you know
+                  what I mean: as if you touched her she'd smear."</said></p>
+
+            <p>He surveyed his shining self complacently in the mirror, smiled faintly, exposing a
+               section of teeth. </p>
+            <p><said>"She must be twenty-three anyway,"</said> he continued.</p>
+
+            <p><said>"Twenty-two last month," </said>said<persName ref="#GordonSterrett"
+                  >Gordon</persName>absently.</p>
+
+            <p><said>"What? Oh, last month. Well, I imagine she's down for the Gamma Psi dance. Did
+                  you know we're having a Yale Gamma Psi dance to-night at
+                     <placeName>Delmonico's</placeName>? You better come up, Gordy. Half of New
+                  Haven'll probably be there. I can get you an invitation."</said></p>
+
+            <p>Draping himself reluctantly in fresh underwear, <persName ref="#PhilipDean"
+                  >Dean</persName> lit a cigarette and sat down by the open window, inspecting his
+               calves and knees under the morning sunshine which poured into the room.</p>
+
+            <p><said>"Sit down, <persName ref="#GordonSterrett">Gordy</persName>,"</said> he
+               suggested, <said>"and tell me all about what you've been doing and what you're doing
+                  now and everything."</said></p>
+
+            <p><persName ref="#GordonSterrett">Gordon</persName> collapsed unexpectedly upon the
+               bed; lay there inert and spiritless. His mouth, which habitually dropped a little
+               open when his face was in repose, became suddenly helpless and pathetic.</p>
+
+            <p><said>"What's the matter?"</said> asked <persName ref="#PhilipDean">Dean</persName>
+               quickly.</p>
+
+            <p><said>"Oh, God!"</said></p>
+
+            <p><said>"What's the matter?"</said></p>
+
+            <p><said>"Every God damn thing in the world,"</said> he said miserably, <said>"I've
+                  absolutely gone to pieces, <persName ref="#PhilipDean">Phil</persName>. I'm all
+                  in."</said></p>
+
+            <p><said>"Huh?"</said></p>
+
+            <p><said>"I'm all in." </said>His voice was shaking.</p>
+
+            <p><persName ref="#PhilipDean">Dean</persName> scrutinized him more closely with
+               appraising blue eyes.</p>
+
+            <p><said>"You certainly look all shot."</said></p>
+
+            <p><said>"I am. I've made a hell of a mess of everything."</said> He paused. <said>"I'd
+                  better start at the beginning--or will it bore you?"</said></p>
+
+            <p><said>"Not at all; go on."</said> There was, however, a hesitant note in <persName
+                  ref="#PhilipDean">Dean's</persName> voice. This trip East had been planned for a
+               holiday--to find <persName ref="#GordonSterrett">Gordon Sterrett</persName> in
+               trouble exasperated him a little.</p>
+
+            <p><said>"Go on,"</said> he repeated, and then added half under his breath, <said>"Get
+                  it over with."</said></p>
+
+            <p><said>"Well,"</said> began <persName ref="#GordonSterrett">Gordon</persName>
+               unsteadily, <said>"I got back from <placeName ref="#France">France</placeName> in
+                  February, went home to <placeName ref="#Harrisburg">Harrisburg</placeName> for a
+                  month, and then came down to <placeName ref="#NewYorkCity">New York</placeName> to
+                  get a job. I got one--with an export company. They fired me yesterday."</said></p>
+
+            <p><said>"Fired you?"</said></p>
+
+            <p><said>"I'm coming to that, <persName ref="#PhilipDean">Phil</persName>. I want to
+                  tell you frankly. You're about the only man I can turn to in a matter like this.
+                  You won't mind if I just tell you frankly, will you, <persName ref="#PhilipDean"
+                     >Phil</persName>?"</said></p>
+
+            <p><persName ref="#PhilipDean">Dean</persName> stiffened a bit more. The pats he was
+               bestowing on his knees grew perfunctory. He felt vaguely that he was being unfairly
+               saddled with responsibility; he was not even sure he wanted to be told. Though never
+               surprised at finding <persName ref="#GordonSterrett">Gordon Sterrett</persName> in
+               mild difficulty, there was something in this present misery that repelled him and
+               hardened him, even though it excited his curiosity.</p>
+
+            <p><said>"Go on."</said></p>
+
+            <p><said>"It's a girl."</said></p>
+
+            <p><said>"Hm."</said>
+               <persName ref="#PhilipDean">Dean</persName> resolved that nothing was going to spoil
+               his trip. If <persName ref="#GordonSterrett">Gordon</persName> was going to be
+               depressing, then he'd have to see less of <persName ref="#GordonSterrett"
+                  >Gordon</persName>. </p>
+            <p><said>"Her name is <persName ref="#JewelHudson">Jewel Hudson</persName>,"</said> went
+               on the distressed voice from the bed. <said>"She used to be 'pure,' I guess, up to
+                  about a year ago. Lived here in New York--poor family. Her people are dead now and
+                  she lives with an old aunt. You see it was just about the time I met her that
+                  everybody began to come back from France in droves--and all I did was to welcome
+                  the newly arrived and go on parties with 'em. That's the way it started, <persName
+                     ref="#PhilipDean">Phil</persName>, just from being glad to see everybody and
+                  having them glad to see me.</said>"</p>
+
+            <p><said>"You ought to've had more sense."</said></p>
+
+            <p><said>"I know,"</said>
+               <persName ref="#GordonSterrett">Gordon</persName> paused, and then continued
+               listlessly. <said>"I'm on my own now, you know, and <persName ref="#PhilipDean"
+                     >Phil</persName>, I can't stand being poor. Then came this darn girl. She sort
+                  of fell in love with me for a while and, though I never intended to get so
+                  involved, I'd always seem to run into her somewhere. You can imagine the sort of
+                  work I was doing for those exporting people--of course, I always intended to draw;
+                  do illustrating for magazines; there's a pile of money in it."</said></p>
+
+            <p><said>"Why didn't you? You've got to buckle down if you want to make good,"</said>
+                  suggested<persName ref="#PhilipDean">Dean</persName>with cold formalism.</p>
+
+            <p><said>"I tried, a little, but my stuff's crude. I've got talent, <persName
+                     ref="#PhilipDean">Phil</persName>; I can draw--but I just don't know how. I
+                  ought to go to art school and I can't afford it. Well, things came to a crisis
+                  about a week ago. Just as I was down to about my last dollar this girl began
+                  bothering me. She wants some money; claims she can make trouble for me if she
+                  doesn't get it."</said></p>
+
+            <p><said>"Can she?"</said></p>
+
+            <p><said>"I'm afraid she can. That's one reason I lost my job--she kept calling up the
+                  office all the time, and that was sort of the last straw down there. She's got a
+                  letter all written to send to my family. Oh, she's got me, all right. I've got to
+                  have some money for her."</said></p>
+
+            <p>There was an awkward pause. <persName ref="#GordonSterrett">Gordon</persName> lay
+               very still, his hands clenched by his side.</p>
+
+            <p><said>"I'm all in,"</said> he continued, his voice trembling. <said>"I'm half crazy,
+                     <persName ref="#PhilipDean">Phil</persName>. If I hadn't known you were coming
+                  East, I think I'd have killed myself. I want you to lend me three hundred
+                  dollars."</said></p>
+
+            <p><persName ref="#PhilipDean">Dean</persName>'s hands, which had been patting his bare
+               ankles, were suddenly quiet--and the curious uncertainty playing between the two
+               became taut and strained.</p>
+
+            <p>After a second <persName ref="#GordonSterrett">Gordon</persName> continued:</p>
+
+            <p><said>"I've bled the family until I'm ashamed to ask for another nickel."</said></p>
+
+            <p>Still<persName ref="#PhilipDean"> Dean</persName>made no answer.</p>
+
+            <p><said>"<persName ref="#JewelHudson">Jewel Hudson</persName> says she's got to have
+                  two hundred dollars."</said></p>
+
+            <p><said>"Tell her where she can go."</said></p>
+
+            <p><said>"Yes, that sounds easy, but she's got a couple of drunken letters I wrote her.
+                  Unfortunately she's not at all the flabby sort of person you'd expect."</said></p>
+
+            <p><persName ref="#PhilipDean">Dean</persName> made an expression of distaste.</p>
+
+            <p><said>"I can't stand that sort of woman. You ought to have kept away."</said></p>
+
+            <p><said>"I know,"</said> admitted <persName ref="#GordonSterrett">Gordon</persName>
+               wearily.</p>
+
+            <p><said>"You've got to look at things as they are. If you haven't got money you've got
+                  to work and stay away from women."</said></p>
+
+            <p><said>"That's easy for you to say,"</said> began <persName ref="#GordonSterrett"
+                  >Gordon</persName>, his eyes narrowing. <said>"You've got all the money in the
+                  world."</said></p>
+
+            <p><said>"I most certainly have not. My family keep darn close tab on what I spend. Just
+                  because I have a little leeway I have to be extra careful not to abuse
+               it."</said></p>
+
+            <p>He raised the blind and let in a further flood of sunshine.</p>
+
+            <p><said>"I'm no prig, Lord knows,"</said> he went on deliberately. <said>"I like
+                  pleasure--and I like a lot of it on a vacation like this, but you're--you're in
+                  awful shape. I never heard you talk just this way before. You seem to be sort of
+                  bankrupt--morally as well as financially".</said></p>
+
+            <p><said>"Don't they usually go together?"</said></p>
+
+            <p><persName ref="#PhilipDean">Dean</persName> shook his head impatiently.</p>
+
+            <p><said>"There's a regular aura about you that I don't understand. It's a sort of
+                  evil."</said></p>
+
+            <p><said>"It's an air of worry and poverty and sleepless nights,</said>" said <persName
+                  ref="#GordonSterrett">Gordon</persName>, rather defiantly.</p>
+
+            <p><said>"I don't know."</said></p>
+
+            <p><said>"Oh, I admit I'm depressing. I depress myself. But, my God, <persName
+                     ref="#PhilipDean">Phil</persName>, a week's rest and a new suit and some ready
+                  money and I'd be like--like I was. <persName ref="#PhilipDean">Phil</persName>, I
+                  can draw like a streak, and you know it. But half the time I haven't had the money
+                  to buy decent drawing materials--and I can't draw when I'm tired and discouraged
+                  and all in. With a little ready money I can take a few weeks off and get
+                  started."</said></p>
+
+            <p><said>"How do I know you wouldn't use it on some other woman?"</said></p>
+
+            <p><said>"Why rub it in?"</said> said <persName ref="#GordonSterrett">Gordon</persName>,
+               quietly.</p>
+
+            <p><said>"I'm not rubbing it in. I hate to see you this way."</said></p>
+
+            <p><said>"Will you lend me the money, <persName ref="#PhilipDean"
+                  >Phil</persName>?"</said></p>
+
+            <p><said>"I can't decide right off. That's a lot of money and it'll be darn inconvenient
+                  for me."</said></p>
+
+            <p><said>"It'll be hell for me if you can't--I know I'm whining, and it's all my own
+                  fault but--that doesn't change it."</said></p>
+
+            <p><said>"When could you pay it back?"</said></p>
+
+            <p>This was encouraging.<persName ref="#GordonSterrett">Gordon</persName>considered. It
+               was probably wisest to be frank.</p>
+
+            <p><said>"Of course, I could promise to send it back next month, but--I'd better say
+                  three months. Just as soon as I start to sell drawings."</said></p>
+
+            <p><said>"How do I know you'll sell any drawings?"</said></p>
+
+            <p>A new hardness in <persName ref="#PhilipDean">Dean</persName>'s voice sent a faint
+               chill of doubt over <persName ref="#GordonSterrett">Gordon</persName> Was it possible
+               that he wouldn't get the money?</p>
+
+            <p><said>"I supposed you had a little confidence in me."</said></p>
+
+            <p><said>"I did have--but when I see you like this I begin to wonder."</said></p>
+
+            <p><said>"Do you suppose if I wasn't at the end of my rope I'd come to you like this? Do
+                  you think I'm enjoying it?"</said> He broke off and bit his lip, feeling that he
+               had better subdue the rising anger in his voice. After all, he was the suppliant.</p>
+
+            <p><said>"You seem to manage it pretty easily,"</said> said<persName ref="#PhilipDean">
+                  Dean</persName>angrily. <said>"You put me in the position where, if I don't lend
+                  it to you, I'm a sucker--oh, yes, you do. And let me tell you it's no easy thing
+                  for me to get hold of three hundred dollars. My income isn't so big but that a
+                  slice like that won't play the deuce with it."</said></p>
+
+            <p>He left his chair and began to dress, choosing his clothes carefully. <persName
+                  ref="#GordonSterrett">Gordon</persName> stretched out his arms and clenched the
+               edges of the bed, fighting back a desire to cry out. His head was splitting and
+               whirring, his mouth was dry and bitter and he could feel the fever in his blood
+               resolving itself into innumerable regular counts like a slow dripping from a
+               roof.</p>
+
+            <p><persName ref="#PhilipDean">Dean</persName> tied his tie precisely, brushed his
+               eyebrows, and removed a piece of tobacco from his teeth with solemnity. Next he
+               filled his cigarette case, tossed the empty box thoughtfully into the waste basket,
+               and settled the case in his vest pocket.</p>
+
+            <p><said>"Had breakfast?"</said> he demanded.</p>
+
+            <p><said>"No; I don't eat it any more."</said></p>
+
+            <p><said>"Well, we'll go out and have some. We'll decide about that money later. I'm
+                  sick of the subject. I came East to have a good time.</said></p>
+
+            <p><said>"Let's go over to the <placeName ref="#YaleClub"><rs ref="url" type="image"
+                        >Yale Club</rs></placeName>,"</said> he continued moodily, and then added
+               with an implied reproof: <said>"You've given up your job. You've got nothing else to
+                  do."</said></p>
+
+            <p><said>"I'd have a lot to do if I had a little money,"</said> said <persName
+                  ref="#GordonSterrett">Gordon</persName> pointedly.</p>
+
+            <p><said>"Oh, for Heaven's sake drop the subject for a while! No point in glooming on my
+                  whole trip. Here, here's some money."</said></p>
+
+            <p>He took a five-dollar bill from his wallet and tossed it over to <persName
+                  ref="#GordonSterrett">Gordon</persName>, who folded it carefully and put it in his
+               pocket. There was an added spot of color in his cheeks, an added glow that was not
+               fever. For an instant before they turned to go out their eyes met and in that instant
+               each found something that made him lower his own glance quickly. For in that instant
+               they quite suddenly and definitely hated each other.</p>
+         </div>
+         <div type="chapter">
+            <head>II</head>
+         </div>
       </body>
-  </text>
+   </text>
 </TEI>
