@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>May Day</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>A trial run of encoding a short story for the Mapping Modernist City project</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>"May Day" by F. Scott Fitzgerald</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  <text>
+      <body>
+         <div1>
+            <head>Prologue</head>
+         <p>There had been <event when="1914-1918" desc="The first world war.">a war</event> fought and won and the <place><settlement><placeName>New York City</placeName>great city</settlement></place> of the
+            conquering people was crossed with triumphal arches and vivid with
+            thrown flowers of white, red, and rose. All through the long spring
+            days <ref type="image">the returning soldiers</ref> marched up the chief highway behind the
+            strump of drums and the joyous, resonant wind of the brasses, while
+            merchants and clerks left their bickerings and figurings and, crowding
+            to the windows, turned their white-bunched faces gravely upon the
+            passing battalions.</p>
+         </div1>
+         <div2>
+            <head>I</head>
+         <p>At nine o'clock on the morning of the first of May, 1919, a young man
+            spoke to the room clerk at the <location type="hotel">Biltmore Hotel</location>,asking if Mr. Philip
+            Dean were registered there, and if so, could he be connected with Mr.
+            Dean's rooms. The inquirer was dressed in a well-cut, shabby suit. He
+            was small, slender, and darkly handsome; his eyes were framed above
+            with unusually long eyelashes and below with the blue semicircle of
+            ill health, this latter effect heightened by an unnatural glow which
+            colored his face like a low, incessant fever.</p>
+         </div2>
+      </body>
+  </text>
+</TEI>
