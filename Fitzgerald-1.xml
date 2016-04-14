@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="mappingmodcity/2015-10-15-modmap1.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<!-- <?xml-model href="mappingmodcity/2015-10-15-modmap1.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> -->
+<TEI version="5.0" xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -21,11 +22,13 @@
          <listEvent>
             <event xml:id="WorldWarI" from="1914-07-28" to="1918-11-11">
                <label>World War I</label>
-               <desc>The first world war began with a thing that happened and ended with an
-                  armistice in 1918. It was known for its grim trench warfare and high fatality
-                  rate.</desc>
+               <desc>The first world war began on July 28, 1914 after the assasination of the
+                  Archduke Franz Ferdinand of the Austro-Hungarian Empire and ended with an
+                  armistice on November 11, 1918. It was known for its grim trench warfare and high
+                  fatality rate.</desc>
             </event>
          </listEvent>
+
          <listPlace>
             <place xml:id="NewYorkCity">
                <label><settlement>New York City</settlement></label>
@@ -37,10 +40,17 @@
                      <addrLine>335 Madison Ave.</addrLine>
                   </address>
                </location>
+               <note type="imagelinks"><ref target="https://archive.org/details/ldpd_11290497_000"
+                     >Drawing of the Biltmore Hotel exterior. Inside the booklet are images of the
+                     dining room, the women's reception room, and the banquet and
+                     ballroom.</ref><ref
+                     target="http://collections.mcny.org/Collection/Hotel%20Biltmore,%20Interior,%20Part%20of%20Lobby%20showing%20desk%20and%20elevators.-2F3XC5813MOW.html"
+                     >Photograph of Biltmore lobby.</ref></note>
             </place>
             <place xml:id="Delmonicos">
                <label>Delmonico's</label>
                <desc>A fashionable club.</desc>
+
                <location type="building">
                   <address>
                      <addrLine>2 South William St.</addrLine>
@@ -123,8 +133,7 @@
             <head>I</head>
             <p>At nine o'clock on the morning of the <date when="1919-05-01">first of May,
                   1919</date>, a young man spoke to the room clerk at the <placeName
-                  ref="#BiltmoreHotel">
-                  <rs ref="url" type="image">Biltmore Hotel</rs></placeName>, asking if <persName
+                  ref="#BiltmoreHotel"> Biltmore Hotel</placeName>, asking if <persName
                   ref="#PhilipDean">Mr. Philip Dean</persName> were registered there, and if so,
                could he be connected with Mr. Dean's rooms. The inquirer was dressed in <rs
                   type="image" ref="url">a well-cut, shabby suit</rs>. He was small, slender, and
@@ -133,7 +142,7 @@
                glow which colored his face like a low, incessant fever.</p>
 
             <p><persName ref="#PhilipDean">Mr. Dean</persName> was staying there. The young man was
-               directed to a <rs ref="url" type="image">telephone</rs> at the side.</p>
+               directed to a <rs type="image" ref="url">telephone</rs> at the side.</p>
 
             <p>After a second his connection was made; a sleepy voice hello'd from somewhere
                above.</p>
