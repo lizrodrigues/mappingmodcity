@@ -5,101 +5,58 @@
 <!-- <?xml-model href="mappingmodcity/2015-10-15-modmap1.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> -->
 <TEI version="5.0" xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
+      <!-- Bibliographic description of this digital file, including information about its source. -->
       <fileDesc>
          <titleStmt>
-            <title>May Day</title>
+            <title>May Day, a TEI edition</title>
+            <author>
+               <persName>F. Scott Fitzgerald</persName>
+               <persName>Elizabeth Rodrigues "lrodrigues"</persName>
+               <persName>Melissa Dinsman "mdinsman"</persName>
+            </author>
          </titleStmt>
          <publicationStmt>
-            <p>A trial run of encoding a short story for the Mapping Modernist City project</p>
+            <p>A trial run of encoding a short story for the Reading Modernist City project</p>
          </publicationStmt>
          <sourceDesc>
             <p>"May Day" by F. Scott Fitzgerald</p>
          </sourceDesc>
       </fileDesc>
+
+      <!-- Information about the encoding of the text. -->
+      <encodingDesc>
+         <projectDesc>
+            <p>This is a sample TEI document for the Reading Modernist Cities project. This TEI
+               document will serve as an example for future TEI markup for RMC.</p>
+         </projectDesc>
+      </encodingDesc>
+
+      <!-- Information about the revisions made to the TEI document. -->
+      <revisionDesc>
+         <change> when= "2016-04-15" who="#mdinsman"> I updated the placeography with imagelinks and
+            videolinks to the media objects for in the archives and libraries. I added in urls for
+            other media objects (not places). I also added the "geo" code and changed "addrLine" to
+            "street." I created an eventography and a cultural materials list and moved all of these
+            to the back matter at the end of the document. Finally, I added in the "revisiondesc" to
+            keep track of our changes and updated the metadata.</change>
+      </revisionDesc>
    </teiHeader>
    <text>
       <body>
-         <listEvent>
-            <event xml:id="WorldWarI" from="1914-07-28" to="1918-11-11">
-               <label>World War I</label>
-               <desc>The first world war began on July 28, 1914 after the assasination of the
-                  Archduke Franz Ferdinand of the Austro-Hungarian Empire and ended with an
-                  armistice on November 11, 1918. It was known for its grim trench warfare and high
-                  fatality rate.</desc>
-            </event>
-         </listEvent>
 
-         <listPlace>
-            <place xml:id="NewYorkCity">
-               <label><settlement>New York City</settlement></label>
-            </place>
-            <place xml:id="BiltmoreHotel">
-               <label>Biltmore Hotel</label>
-               <location type="building">
-                  <address>
-                     <addrLine>335 Madison Ave.</addrLine>
-                  </address>
-               </location>
-               <note type="imagelinks"><ref target="https://archive.org/details/ldpd_11290497_000"
-                     >Drawing of the Biltmore Hotel exterior. Inside the booklet are images of the
-                     dining room, the women's reception room, and the banquet and
-                     ballroom.</ref><ref
-                     target="http://collections.mcny.org/Collection/Hotel%20Biltmore,%20Interior,%20Part%20of%20Lobby%20showing%20desk%20and%20elevators.-2F3XC5813MOW.html"
-                     >Photograph of Biltmore lobby.</ref></note>
-            </place>
-            <place xml:id="Delmonicos">
-               <label>Delmonico's</label>
-               <desc>A fashionable club.</desc>
-
-               <location type="building">
-                  <address>
-                     <addrLine>2 South William St.</addrLine>
-                  </address>
-               </location>
-            </place>
-            <place xml:id="France">
-               <label><country key="FR">France</country></label>
-            </place>
-            <place xml:id="Harrisburg">
-               <label><settlement>Harrisburg</settlement></label>
-            </place>
-            <place xml:id="YaleClub">
-               <label>Yale Club</label>
-               <location type="building">
-                  <address>
-                     <addrLine>Some address</addrLine>
-                  </address>
-               </location>
-            </place>
-         </listPlace>
-         <listPerson>
-            <person xml:id="PhilipDean" role="character">
-               <persName>Philip Dean</persName>
-               <persName><addName>Dean</addName></persName>
-            </person>
-            <person xml:id="GordonSterrett" role="character">
-               <persName>Gordon Sterrett</persName>
-               <persName><addName>Gordy</addName></persName>
-            </person>
-            <person xml:id="EdithBradin" role="character">
-               <persName>Edith Bradin</persName>
-            </person>
-            <person xml:id="JewelHudson" role="character">
-               <persName>Jewel Hudson</persName>
-            </person>
-         </listPerson>
-
+         <!-- Ecoding of F. Scott Fitzgerald's "May Day" text -->
          <div type="prologue">
             <head>Prologue</head>
 
             <p>There had been <rs type="event" ref="#WorldWarI">a war</rs> fought and won and the
                   <rs type="place" ref="#NewYorkCity">great city</rs> of the conquering people was
                crossed with triumphal arches and vivid with thrown flowers of white, red, and rose.
-               All through the long spring days <ref type="image">the returning soldiers</ref>
-               <rs type="direction">marched up the chief highway</rs> behind the strump of drums and
-               the joyous, resonant wind of the brasses, while merchants and clerks left their
-               bickerings and figurings and, crowding to the windows, turned their white-bunched
-               faces gravely upon the passing battalions.</p>
+               All through the long spring days <rs type="image" ref="#returningsoldiers">the
+                  returning soldiers</rs>
+               <rs type="direction" ref="#returningsoldiers">marched up the chief highway</rs>
+               behind the strump of drums and the joyous, resonant wind of the brasses, while
+               merchants and clerks left their bickerings and figurings and, crowding to the
+               windows, turned their white-bunched faces gravely upon the passing battalions.</p>
 
             <p>Never had there been such splendor in the great city, for the victorious war had
                brought plenty in its train, and the merchants had flocked thither from the South and
@@ -108,13 +65,13 @@
                bags of golden mesh and varicolored slippers of silk and silver and rose satin and
                cloth of gold.</p>
 
-            <p>So <rs type="sound">gaily and noisily</rs> were the peace and prosperity impending
-               hymned by the scribes and poets of the conquering people that more and more spenders
-               had gathered from the provinces to drink the wine of excitement, and faster and
-               faster did the merchants dispose of their trinkets and slippers until they sent up a
-               mighty cry for more trinkets and more slippers in order that they might give in
-               barter what was demanded of them. Some even of them flung up their hands helplessly,
-               shouting:</p>
+            <p>So <rs type="sound" ref="#returningsoldiers">gaily and noisily</rs> were the peace
+               and prosperity impending hymned by the scribes and poets of the conquering people
+               that more and more spenders had gathered from the provinces to drink the wine of
+               excitement, and faster and faster did the merchants dispose of their trinkets and
+               slippers until they sent up a mighty cry for more trinkets and more slippers in order
+               that they might give in barter what was demanded of them. Some even of them flung up
+               their hands helplessly, shouting:</p>
 
             <p><quote>"Alas! I have no more slippers! and alas! I have no more trinkets! May heaven
                   help me for I know not what I shall do!"</quote></p>
@@ -124,9 +81,9 @@
                men returning were pure and brave, sound of tooth and pink of cheek, and the young
                women of the land were virgins and comely both of face and of figure.</p>
 
-            <p>So during all this time there were many adventures that happened in the <rs
-                  type="direction" ref="#NewYorkCity">great city</rs>, and, of these, several--or
-               perhaps one--are here set down.</p>
+            <p>So during all this time there were many adventures that happened in <rs
+                  type="direction" ref="#NewYorkCity">the great city</rs>, and, of these,
+               several--or perhaps one--are here set down.</p>
 
          </div>
          <div type="chapter">
@@ -136,13 +93,14 @@
                   ref="#BiltmoreHotel"> Biltmore Hotel</placeName>, asking if <persName
                   ref="#PhilipDean">Mr. Philip Dean</persName> were registered there, and if so,
                could he be connected with Mr. Dean's rooms. The inquirer was dressed in <rs
-                  type="image" ref="url">a well-cut, shabby suit</rs>. He was small, slender, and
-               darkly handsome; his eyes were framed above with unusually long eyelashes and below
-               with the blue semicircle of ill health, this latter effect heightened by an unnatural
-               glow which colored his face like a low, incessant fever.</p>
+                  type="image" ref="#shabbysuit">a well-cut, shabby suit</rs>. He was small,
+               slender, and darkly handsome; his eyes were framed above with unusually long
+               eyelashes and below with the blue semicircle of ill health, this latter effect
+               heightened by an unnatural glow which colored his face like a low, incessant
+               fever.</p>
 
             <p><persName ref="#PhilipDean">Mr. Dean</persName> was staying there. The young man was
-               directed to a <rs type="image" ref="url">telephone</rs> at the side.</p>
+               directed to a <rs type="image" ref="#telephone">telephone</rs> at the side.</p>
 
             <p>After a second his connection was made; a sleepy voice hello'd from somewhere
                above.</p>
@@ -162,8 +120,8 @@
             <p>A few minutes later <persName ref="#PhilipDean">Philip Dean</persName>, dressed in
                blue silk pajamas, opened his door and the two young men greeted each other with a
                half-embarrassed exuberance. They were both about twenty-four, <rs type="image"
-                  ref="url" ana="Yale Class of 1913">Yale graduates of the year before the war</rs>;
-               but there the resemblance stopped abruptly.<persName ref="#PhilipDean">
+                  ref="#Yale" ana="Yale Class of 1913">Yale graduates of the year before the
+                  war</rs>; but there the resemblance stopped abruptly.<persName ref="#PhilipDean">
                   Dean</persName>was blond, ruddy, and rugged under his thin pajamas. Everything
                about him radiated fitness and bodily comfort. He smiled frequently, showing large
                and prominent teeth. </p>
@@ -173,8 +131,8 @@
                   Going to take a shower."</said></p>
 
             <p>As he vanished into the bathroom his visitor's dark eyes roved nervously around the
-               room, resting for a moment on a great <rs type="image" ref="url">English travelling
-                  bag</rs> in the corner and on a family of <rs type="image" ref="url">thick silk
+               room, resting for a moment on a great <rs type="image" ref="#travellingbag">English travelling
+                  bag</rs> in the corner and on a family of <rs type="image" ref="#shabbysuit">thick silk
                   shirts littered on the chairs amid impressive neckties and soft woollen
                socks</rs>.</p>
 
@@ -482,5 +440,145 @@
             <head>II</head>
          </div>
       </body>
+
+      <back>
+         <div type="editorial">
+            <!-- Eventography We will want to move this to a separate document eventually, but for now we can move these to the end of the document.-->
+            <listEvent>
+               <event xml:id="WorldWarI" from="1914-07-28" to="1918-11-11">
+                  <label>World War I</label>
+                  <desc>The first world war began on July 28, 1914 after the assasination of the
+                     Archduke Franz Ferdinand of the Austro-Hungarian Empire and ended with an
+                     armistice on November 11, 1918. It was known for its grim trench warfare and
+                     high fatality rate. <ptr target="https://en.wikipedia.org/wiki/World_War_I"
+                     /></desc>
+               </event>
+               <event xml:id="returningsoldiers">
+                  <label>Returning Solideriers</label>
+                  <desc>Parades of returning WWI soldiers were common between December 1918 and
+                     throughout 1919. In New York the path often moved up Fifth Avenue. Special
+                     arches were constructed specifically for the occasion. These parades marked
+                     everything from the return of Gen. John Pershing, commander-in-chief of the
+                     American Expeditionary Force, and the celebration of the 369th infantry,
+                     America's first African-American regiment with the AEF.</desc>
+                  <note type="imagelinks"><ref target="http://nycma.lunaimaging.com/luna/servlet"
+                        >NYC Department of Records houses images of soldiers returning to the U.S.
+                        in 1919 inlcuding "The Heroic 27th Division Passing Under the Arch at
+                        Madison Square, 1919," "Great Parade of the Heroic 27th, 1919," and "Parade
+                        of the 27th Division, 1919"</ref></note>
+                  <!-- Liz, if you want to add in the exact urls for these three images, you are welcome to. We will just have to fix the &amp; in the urls. -->
+                  <note>type="videolinks"><ref target="https://www.youtube.com/watch?v=V13usa8qBe0"
+                        >Video of WWI soldier parade in New York as they return from
+                     war.</ref></note>
+               </event>
+            </listEvent>
+
+            <!-- Placeography. We may want to make the Placeography a separate TEI file later on so that other texts can refer to the same locations. -->
+            <listPlace>
+               <place xml:id="NewYorkCity">
+                  <label><settlement>New York City</settlement></label>
+
+               </place>
+               <place xml:id="BiltmoreHotel">
+                  <label>Biltmore Hotel</label>
+                  <location type="building">
+                     <address>
+                        <street>335 Madison Ave.</street>
+                     </address>
+                     <geo>40.7536 -73.9781</geo>
+                  </location>
+                  <note type="imagelinks"><ref
+                        target="https://archive.org/details/ldpd_11290497_000"> Drawing of the
+                        Biltmore Hotel exterior. Inside the booklet are images of the dining room,
+                        the women's reception room, and the banquet and ballroom.</ref><ref
+                        target="http://collections.mcny.org/Collection/Hotel%20Biltmore,%20Interior,%20Part%20of%20Lobby%20showing%20desk%20and%20elevators.-2F3XC5813MOW.html"
+                        >Photograph of Biltmore lobby.</ref></note>
+               </place>
+               <place xml:id="Delmonicos">
+                  <label>Delmonico's</label>
+                  <desc>A fashionable club.</desc>
+                  <location type="building">
+                     <address>
+                        <street>2 South William St.</street>
+                     </address>
+                     <geo>40.75473442 -73.97988439</geo>
+                  </location>
+               </place>
+               <place xml:id="France">
+                  <label><country key="FR">France</country></label>
+               </place>
+               <place xml:id="Harrisburg">
+                  <label><settlement>Harrisburg</settlement></label>
+               </place>
+               <place xml:id="YaleClub">
+                  <label>Yale Club</label>
+                  <location type="building">
+                     <geo>40.754094 -73.9781101</geo>
+                  </location>
+               </place>
+               <place xml:id="Yale">
+                  <label>Yale University</label>
+                  <location>
+                     <geo>41.3111 -72.926</geo>
+                  </location>
+                  <note>type="imagelinks"><ref
+                        target="https://archive.org/details/5579689162_f3e0885f59_o">Photograph of
+                        the Yale Class of 1911 found in the Internet Archive.</ref></note>
+               </place>
+            </listPlace>
+
+            <!-- Personography -->
+            <listPerson>
+               <person xml:id="PhilipDean" role="character">
+                  <persName>Philip Dean</persName>
+                  <persName><addName>Dean</addName></persName>
+               </person>
+               <person xml:id="GordonSterrett" role="character">
+                  <persName>Gordon Sterrett</persName>
+                  <persName><addName>Gordy</addName></persName>
+               </person>
+               <person xml:id="EdithBradin" role="character">
+                  <persName>Edith Bradin</persName>
+               </person>
+               <person xml:id="JewelHudson" role="character">
+                  <persName>Jewel Hudson</persName>
+               </person>
+            </listPerson>
+
+            <!-- Cultural Matierals List. List of cultural materials and then "descriptions" of objects." Info needed. -->
+            <list type="culturalmaterials">
+               <item xml:id="shabbysuit">
+                  <label>"a well cut shabby suit"</label>
+                  <desc>need description of our editorial process in determing the shabby
+                     suit</desc>
+                  <ref
+                     target="http://digital.nypl.org/mmpco/browseFTresults.cfm?&amp;trg=2&amp;image_id=817034&amp;title=Spring%20And%20Summer%201919%20New%20York%20Fashions%2E&amp;strucID=582487&amp;dstart=61&amp;titleid=569656&amp;pstrucid=569656"
+                     >Sketch from the New York Public Library of "Spring and Summer 1919 New York
+                     Fashions"></ref>
+               </item>
+               <item xml:id="telephone">
+                  <label>"telephone"</label>
+                  <desc>Exmaples of telephones from the early twentieth century.</desc>
+                  <ref
+                     target="http://digitalcollections.nypl.org/items/510d47d9-b17d-a3d9-e040-e00a18064a99"
+                     >Photograph by Morris Rosenfeld of an early twentieth century in the New York
+                     Public Library.</ref>
+               </item>
+               <item xml:id="travellingbag">
+                  <label>"English travelling bag</label>
+                  <desc>From a traveler's account in 1911: "We found the bag most convenient; for it
+                     was extensible, as well as light....It was fearfully and wonderfully made, with
+                     pockets and flaps and countless places to put things." (Burton Egbert
+                     Stevenson, The Spell of Holland, 1911) From a literary scholar's analysis:
+                     "[Fitzgerald's] focus in this passage rests at least in part on American
+                     postures of class and authority that, ineptly modeled after British manners,
+                     rely on materialism at the expense of substance." (Lauren Rule Maxwell,
+                     Romantic Revisions in Novels from the Americas, 2013)</desc>
+               </item>
+
+            </list>
+         </div>
+
+      </back>
    </text>
 </TEI>
