@@ -11,8 +11,10 @@
             <title>May Day, a TEI edition</title>
             <author>
                <persName>F. Scott Fitzgerald</persName>
-               <persName>Elizabeth Rodrigues "lrodrigues"</persName>
-               <persName>Melissa Dinsman "mdinsman"</persName>
+               <persName>Elizabeth Rodrigues</persName>
+                  <addName xml:id="lrodrigues"></addName>
+               <persName>Melissa Dinsman</persName>
+               <addName xml:id="mdinsman"></addName>
             </author>
          </titleStmt>
          <publicationStmt>
